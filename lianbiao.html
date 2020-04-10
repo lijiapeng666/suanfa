@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // class Node {
+        //     constructor(value) {
+        //         this.value = value
+        //         this.next = null
+        //     }
+        // }
+        // class nodeList {
+        //     constructor() {
+        //         this.head = new Node("head")
+        //     }
+
+        //     findList(item) {
+
+        //         let currentNode = this.head
+        //         console.log(currentNode)
+        //         while (currentNode.value != item) {
+        //             currentNode = currentNode.next
+        //         }
+        //         return currentNode
+        //     }
+        //     insert(item, position) {
+        //         const current = this.findList(item)
+        //         const currentItem = new Node(item)
+        //         currentItem.next = current.next
+        //         current.next = currentItem
+        //         console.log(current)
+        //     }
+
+        // }
+        // const animall = new nodeList
+        // animall.insert("tiger", "head")
+        // animall.insert('loan', "tiger")
+        // animall.insert('mous', "loan")
+
+        // class Node {
+        //     constructor(value) {
+        //         this.value = value;
+        //         this.next = null
+        //     }
+        // }
+        // class linkList {
+        //     constructor() {
+        //         this.head = new Node('head')
+        //     }
+        //     insert(newItem, oldItem) {
+        //         let currentItem = new Node(newItem)
+        //         let oldItemPosition = this.find(oldItem)
+        //         currentItem.next = oldItemPosition.next
+        //         oldItemPosition.next = currentItem
+        //     }
+        // find(item) {
+        //     let currentNode = this.head
+        //     while (currentNode.value != item) {
+        //         currentNode = currentNode.next
+        //     }
+        //     return currentNode
+        // }
+        //         find(item) {
+
+        // const currentNode = this.head
+        //     // console.log(currentNode)
+        // while (currentNode.value != item) {
+        //     currentNode = currentNode.next
+        // }
+        // return currentNode
+        // }
+        //     reveseLink() {
+        //         let currentItem = JSON.parse(JSON.stringify(this.head))
+        //         var currentNodePre = null
+        //         var currentNodeNext = null
+        //         while (currentItem) {
+        //             // currentNodeNext = currentItem.next
+        //             // //将第一个值之外的后半部分保存
+        //             // currentItem.next = currentNodePre
+        //             // //保存后将原有的后半部分设置为空
+        //             // currentNodePre = currentItem
+        //             // //将原有的第一个值保存
+        //             // currentItem = currentNodeNext
+        //             // //将剩余的值还给原节点
+        //             currentNodeNext = currentItem.next
+        //             currentItem.next = currentNodePre
+        //             currentNodePre = currentItem
+        //             currentItem = currentNodeNext
+
+        //         }
+        //         console.log(currentNodePre)
+        //     }
+        // }
+        // let list = new linkList
+        // list.insert('Apple', "head")
+        // list.insert("Banana", 'Apple')
+        // list.insert('Pear', "Banana")
+        // console.log(list.head)
+        // list.reveseLink()
+
+        class Node {
+            constructor(value) {
+                this.value = value;
+                this.next = null;
+            }
+        }
+        class LinkList {
+            constructor() {
+                    this.head = new Node("head");
+                }
+                // find(item) {
+                //     let currentNode = this.head;
+                //     while (currentNode.value != item) {
+                //         currentNode = currentNode.next;
+                //     }
+                //     return currentNode;
+                // }
+
+            find(item) {
+                let currentNode = this.head
+                while (currentNode.value !== item) {
+                    currentNode = currentNode.next
+                }
+                return currentNode
+            }
+            insert(item, position) {
+                const currentItem = new Node(item);
+                const currentOldItem = this.find(position);
+                currentItem.next = currentOldItem.next;
+                currentOldItem.next = currentItem;
+            }
+            reveseList() {
+                let currentItem = JSON.parse(JSON.stringify(this.head));
+                let currentResult = null;
+                let currentNext = null;
+                while (currentItem) {
+                    currentNext = currentItem.next;
+                    currentItem.next = currentResult;
+                    currentResult = currentItem;
+                    currentItem = currentNext;
+                }
+                console.log(currentResult)
+            }
+        }
+        let list = new LinkList();
+        list.insert("Apple", "head");
+        list.insert("Banana", "Apple");
+        list.insert("Pear", "Banana");
+        console.log(list.head);
+        list.reveseList();
+    </script>
+</body>
+
+</html>

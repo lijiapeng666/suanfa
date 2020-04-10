@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // class User{
+      //     constructor(name){
+      //         this.name = name
+      //     }
+      //     show(){
+
+      //     }
+      //     get(){
+      //         console.log("didi")
+      //     }
+      // }
+      // let hd = new User('dada')
+      // hd.get()
+
+      // function hd (){
+
+      // }
+      // hd.prototype.show=function(){
+      //     console.log(hd)
+      // }
+      // let h = new hd("didi")
+      // // for(const key in h ){
+      // //     console.log(key)
+      // // }
+      // for (const key in h ){
+      //     if(h.hasOwnProperty(key)){
+      //         console.log(key)
+      //     }
+      // }
+      // 'use strict'
+      // function show(){
+      //     console.log(this)
+      // }
+      // show()
+      // function User(){
+
+      // }
+
+      // User.prototype.show=function(){
+      //     function test(){
+      //         console.log(this)
+      //     }
+      // }
+      // let u  = new User
+      // u.show()
+
+      // class Hd{
+      //     show(){
+      //         function test(){
+      //             console.log(this)
+      //         }
+      //         test()
+      //     }
+      // }
+      // let hd = new Hd()
+      // hd.show()
+
+      // function Web (url){
+      //     this.url  = url
+
+      // }
+      // web.url = 'hdcms.com'
+      // let hd = new Web("didi")
+      // console.log(hd)
+      // console.log(Web)
+      // class Request{
+      //    static host = 'https://www.baidu.com'
+      // }
+      // let obj = new Request()
+      // console.log(obj)
+      // let obj2 = new Request()
+      // obj.host = "http://didi.com"
+      // console.log(obj2)
+
+      // function User(){
+      //   this.show = function(){
+
+      //   }
+      // }
+      // // let hd  = new User()
+      // // console.log(hd)
+      // // let hd1 = new User()
+      // // console.log(hd1)
+
+      // User.prototype.show = function(){
+      //    console.log("普通方法")
+      // }
+      // User.__proto__.show()=function(){
+      //   console.log("静态方法")
+      // }
+      // class User{
+      //   show(){
+      //     console.log("prototype.show")
+      //   }
+      //   static show = function() {
+      //     console.log("静态方法")
+      //   }
+      // }
+
+      // // User.__proto__.show=function(){
+      // //   console.log("静态方法")
+      // // }
+      // User.show()
+      // console.log(typeof User)
+
+      // let hd = new User()
+      // console.log(hd)
+
+      // class User{
+      //   constructor(name,age){
+      //     this.name = name
+      //     this.age =age
+      //   }
+      //   static create(...args){
+      //     return new this(...args)
+      //   }
+      // }
+      // let jp = User.create("jp")
+
+      // const data = [
+      //   {
+      //     name: "js",
+      //     price: 100
+      //   },
+      //   {
+      //     name: "mysql",
+      //     price: 212
+      //   },
+      //   {
+      //     name: "vue.js",
+      //     price: 98
+      //   }
+      // ];
+      // class Lesson {
+      //   constructor(data) {
+      //     this.model = data;
+      //   }
+      //   price() {
+      //     return this.model.price;
+      //   }
+      //   static createBatch(data) {
+      //     data.map(item => {
+      //       return new Lesson(item);
+      //     });
+      //   }
+      //   static maxPrice(data) {
+      //     return data.sort((a, b) => {
+      //       b.price() - a.price();
+      //     });
+      //   }
+      // }
+      // //  let obj1 = new Lesson(data[0])
+      // //  console.log(obj1)
+      // let lesson = Lesson.createBatch(data);
+      // console.log(lesson);
+      // Lesson.maxPrice();
+
+      //  class Requset{
+      //    constructor(url){
+      //      this._host=url
+      //    }
+      //    set host(url){
+      //      if(/^http?:\/\//i.test(url)){
+      //        throw new Error("地址错误")
+      //      }
+      //      this._host =url;
+      //    }
+
+      //  }
+      //  let hd = new Request("https://www.baidu.com")
+      //  hd.host="hdcms"
+      //  console.log(hd)
+
+      // class User {
+      //   _site = '后盾人'
+      //   constructor(name) {
+      //     this.name = name;
+      //   }
+      //   set url (url){
+      //     if(!/^https?:/i.test(url)){
+      //       throw new Error("非正常网址")
+      //     }
+      //     this._url = url
+      //   }
+      // }
+      // let hd = new User("jp");
+      // hd.name = "gc";
+      // hd.url = "hdcms"
+      // console.log(hd);
+      // function User(params) {
+
+      // }
+      // User.prototype.show = function(params) {
+      //     console.log("hd")
+      // }
+      // function Admin(params) {
+
+      // }
+      // Admin.prototype=Object.create(User.prototype)
+      // let hd = new Admin()
+      // hd.show()
+      // class User {
+      //   show(){
+      //     console.log("hd")
+      //   }
+      // }
+      // class Admin extends User{}
+      // let hd = new Admin();
+      // hd.show()
+
+      //  class User{
+      //    show(){
+      //      console.log('hd')
+      //    }
+      //  }
+      //  class Admin extends User{
+      //    constructor(name){
+      //      super();
+      //      this.name=name
+      //    }
+      //  }
+
+      //  let hd = new Admin("湘军");
+      //  hd.show()
+      //  console.log(hd)
+
+      // let hd = {
+      //   show(){
+      //     console.log('hd.show')
+      //   }
+      // }
+      // let xj  = {
+      //   __proto__:hd,
+      //   show(){
+      //     this.show();
+      //     console.log("xj.show")
+      //   }
+      // }
+      // console.log(xj)
+      // let xj = {
+
+      //   __proto__:hd,
+      //   show(){
+      //     this.__proto__.show()
+      //     console.log("xj.show")
+      //   }
+      // }
+      // xj.show()
+
+      // class User{
+      //   constructor(name){
+      //     this.site = 'abc'
+      //   }
+
+      // }
+      // class Admin extends User{
+      //   constructor(...args){
+      //     super(...args)
+      //     this.site  = "didixs"
+
+      //   }
+      // }
+      // let hd = new Admin()
+      // console.log(hd)
+
+      // class Constructor{
+      //   constructor(){
+      //     console.log("ABC")
+      //   }
+      //   sum(){
+      //     console.log("221121")
+      //   }
+      // }
+      // class Lesson extends Constructor{
+      //    constructor(data){
+      //      super()
+      //      this.data = data
+      //    }
+      // }
+      // let hd = new Lesson();
+      // hd.sum()
+
+
+      // function  Arr(...args) {
+      //   args.forEach(item=>this.push(item))
+      //   console.log(this)
+      //   this.first = function() {
+      //      return this[0]
+      //   }
+      //   this.Max = function () {
+      //     return this.sort((a,b)=>b-a)[0]
+      //   }
+     
+        
+      // }
+      // Arr.prototype=Object.create(Array.prototype)
+      // let hd  = new Arr(1,2,3,4,1,3)
+      // console.log(hd)
+   
+      // class  Arr extends Array{
+      //   constructor(...arg){
+      //     super(...arg)
+      //   }
+      // }
+
+      
+
+      
+      
+
+
+    </script>
+  </body>
+</html>

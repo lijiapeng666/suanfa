@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <!-- <script>
+        // 实现(5).add(3).minus(2) 使其输出为6
+        // 每一个方法执行完，返回Number这个类的实例，这样才可以继续调取NUMBER类原型中的方法
+
+        ~ function() {
+
+            function checkout(n) {
+                n = Number(n)
+                return isNaN(n) ? 0 : n
+            }
+
+            function add(n) {
+                n = checkout(n)
+                return this + n
+
+            }
+
+            function minus(n) {
+                n = checkout(n)
+                return this - n
+
+            }
+            // ["add", "minus"].forEach(item => {
+            //     Number.prototype[item] = eval(item)
+            // })
+            Number.prototype.add = add
+            Number.prototype.minus = minus
+        }();
+        console.log((5).add(3).minus(2))
+    </script> -->
+
+
+
+    <!-- <script>
+        //   箭头函数与普通函数的区别（function）的区别是什么？构造函数（function）可以使用new生成实例，箭头函数可以吗？为什么不行？
+        // 1.区别：箭头函数比普通函数更简洁
+        // 2.箭头函数没有自己的this，它里面出现的this从属于函数所处上下文中的this（使用call/apply等任何方式都无法改变）
+        // 3.箭头函数没有prototype，不能用new执行
+        // 4.建有函数没有argument类数组，只能基于...arg传递参数集合
+
+        // let obj = {
+        //     name: "OBJ"
+        // }
+
+        // function fn1() {
+        //     console.log(this)
+        // }
+        // fn1.call(obj)
+
+        // let fn2 = () => {
+        //     console.log(this)
+        // }
+        // fn2.call(obj)
+    </script> -->
+
+    <!-- <script>
+        //   把一个字符串大写变小写，小写变大写
+        let str = 'lijiapengPNG666'
+        str = str.replace(/[a-zA-Z]/g, content => {
+            return content.toUpperCase() === content ? content.toLowerCase() : content.toUpperCase()
+        })
+        console.log(str)
+    </script> -->
+
+    <script>
+        //   实现一个字符串匹配方法，从字符串s中，查找是否存在字符串T，若存在返回所在位置，不存在返回-1，
+        // function myIndexOf() {
+        //     // This=S
+        //     let lenT = T.length,
+        //         lenS = S.length,
+        //         res = -1
+        //     if (lenT > lenS) {
+        //         return res
+        //     }
+        //     for (let i = 0; i <= lenS - lenT; i++) {
+        //         if (this.substr(i, lenT) === T) {
+        //             res = i
+        //             break
+        //         }
+        //     }
+        //     return res
+
+        // }
+        // String.prototype.myIndexOf = myIndexOf
+        //     // let res = new myIndexOf
+        // let S = "lijiapeng"
+        // let T = 'jia'
+        //     // console.log(S)
+        // console.log(S.myIndexOf(T))
+        //   正则写法
+
+        // function MyIndexOf(T) {
+        //     let reg = new RegExp(T)
+        //     res = reg.exec(this)
+        //     return res === null ? -1 : res.index;
+        // }
+        // String.prototype.MyIndexOf = MyIndexOf
+
+        // let S = "lijiapeng"
+        // let T = 'jia'
+        // console.log(S.MyIndexOf(T))
+    </script>
+
+
+
+    <!-- <script>
+        // eg 1:
+        var a = {},
+            b = "123",
+            c = 123
+        a[b] = 'b';
+        a[c] = 'c';
+        console.log(a[b]) //=>c 因为：a["123"]<=>a[123]
+
+        // eg 2:
+        var a = {},
+            b = Symbol("123"),
+            c = Symbol('123');
+        a[b] = "b"
+        a[c] = "c"
+        console.log(a[b]) //symbol 值唯一
+
+        // eg 3:
+        var a = {},
+            b = {
+                key: "123"
+            },
+            c = {
+                key: '456'
+            }
+        a[b] = 'b'
+        a[c] = 'c'
+        console.log(a[b])
+            // 1.对象的属性名不能是一个对象（遇到对象属性名，会默认转为字符串）
+            // obj ={} arr={12,23} obj[arr]="jiapeng"  obj=>{"12,23":"jiapeng"}
+    </script> -->
+
+
+    <script>
+        // 在输入框中如何判断输入的是一个正确的网址，例如：用户输入一个字符串，验证是否符合URL网址的格式
+
+        // let str = 'http://www.lijiapeng.com/index.html?lx=1&from=wx#video';
+
+        // let reg = /^(?:(http|https|ftp):\/\/)?((?:[\w-]+\.)+[a-z0-9]+)((?:\/[^/?#]*)+)?(\?[^#]+)?(#.+)?$/i
+        //     //=>  
+        //     //2.域名: www.xxx.xx     xxx.xx
+        //     //kbs.sports.qq.com   
+        //     //kbs.sports.qq.com.cn
+        //     //3.请求路径 index.html   /stu/index.html    /stu/      /
+        //     //4.问号传参数 ?xxx=xxx&xxx=xxx 
+        //     //5.哈希值  #xxx
+        // console.log(reg.exec(str))
+    </script>
+
+
+
+
+    <script>
+        function quercoin(n) {
+            if (n == 1) {
+                return 1 / 1000
+            }
+            if (n == 0) {
+                return 0
+            }
+            result = 1 / 1000
+            for (i = 1; i < n; i++) {
+                result += 1 / (1000 - i)
+            }
+            return result
+
+
+        }
+        quercoin(1)
+    </script>
+
+</body>
+
+</html>

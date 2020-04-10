@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- <script>
+        function Node(Value) {
+            this.Value = Value;
+            this.Next = null
+        }
+
+        function Link() {
+            this.head = new Node("head");
+            this.findNode = findNode;
+            this.insert = insert;
+            this.print = print
+        }
+
+        function findNode(item) {
+            var currNode = this.head
+            while (currNode.Value != item) {
+                currNode = currNode.Next
+            }
+            return currNode
+        }
+
+        function insert(newItem, Item) {
+            var newNode = new Node(newItem)
+            console.log(new Node(newItem))
+            var currNode = this.findNode(Item)
+            console.log("currNode", currNode)
+                //currNode老节点
+            newNode.Next = currNode.Next
+            console.log("newNode.Next", newNode.Next)
+            currNode.Next = newNode
+            console.log("currNode.Next", currNode.Next)
+            console.log("分割线-----------------------")
+        }
+
+        function print() {
+            var currNode = this.head
+            while (!(currNode.Next === null)) {
+                console.log(currNode.Next.Value)
+                currNode = currNode.Next
+            }
+        }
+        var fruits = new Link()
+        fruits.insert("apple", "head")
+        fruits.insert("banana", "apple")
+        fruits.insert("pear", "banana")
+        fruits.insert("tomato", "apple")
+
+        console.log(fruits.print()) -->
+    <!-- </script> -->
+
+    <!-- <script>
+      class Node {
+        constructor(value) {
+          this.value = value;
+          this.next = null;
+        }
+      }
+      class NodeList {
+        constructor() {
+          this.head = new Node("head");
+        }
+        find(item) {
+          let currNode = this.head;
+          console.log(currNode)
+          while (currNode.value !== item) {
+            currNode = currNode.next;
+          }
+          return currNode;
+        }
+        insert(item,position){
+            let currNode = new Node(item)
+            let positionNode = this.find(position)
+            currNode.next=positionNode.next
+            positionNode.next = currNode
+        }
+        print(){
+            console.log(this.head)
+        }
+      }
+      var fruits = new NodeList()
+        fruits.insert("apple", "head")
+        fruits.insert("banana", "apple")
+        fruits.insert("pear", "banana")
+        fruits.insert("tomato", "apple")   
+        fruits.print()
+    </script> -->
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+       var lengthOfLongSubstring = function(s){
+             var res = 0 ;
+             var str = "";
+             for(var i = 0 ; i<s.length;i++){
+                 var char = s.charAt(i);
+                 //charAt(index)方法为返回指定位置的字符
+                 console.log("char",char)
+                 var index = str.indexOf(char);
+                 //indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。如果检索的字符串值没有出现返回-1
+                 console.log("index",index)
+                 if(index===-1){
+                     str+=char;
+                     res= res<str.length?str.length:res;
+                      console.log("res",res)
+                      console.log("str",str)
+                      console.log("--------------------------")
+                 }else{
+                     str=str.substr(index+1)+char
+                     console.log("str1" ,str )
+                     //substr() 方法可在字符串中抽取从 start 下标开始的指定数目的字符。
+                 }
+             }
+             return res;
+       }   
+
+    var texst = function(str){
+        
+    console.log( str.indexOf("d"))  
+
+    }
+    
+    </script>    
+</body>
+</html>

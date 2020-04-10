@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" validate rule="max:12,min:3" />
+    <input type="text" validate rule="max:12,isNumber" />
+    <script>
+      //   let name = "xj"
+      //   let grade = [{name:'js',score:99},{name:'docker',score:76}]
+      //   function ave(grad,name) {
+      //     let total = grad.reduce((a,b)=>a+b.score,0)
+      //     console.log(total/grade.length)
+      //   }
+      //   console.log(ave(grade,name))
+      //   let user = {
+      //     name: "xj",
+      //     grade: [
+      //       { name: "js", score: 99 },
+      //       { name: "docker", score: 76 }
+      //     ],
+      //     average() {
+      //       let total = this.grade.reduce((a, b) => a + b.score, 0);
+      //       return total / this.grade.length;
+      //     }
+      //   };
+      //   console.log(user.average());
+
+      //   let user = {
+      //     name: "xj"
+      //   };
+      //   console.log(user.name);
+      //   console.log(user["name"]);
+
+      //   for (const key in user) {
+      //     console.log(user[key]);
+      //   }
+      //   user.age = 19
+      //   user.get=function(){
+      //       return this.name
+      //   }
+      //   delete user.age
+
+      // let user = {}
+      // let hd = user
+      // user.name = 'xj'
+      // console.log(hd.name)
+
+      // let arr = [1,2,3,5]
+      // let a = [...arr,5,6,7]
+      // console.log(a)
+
+      // let web ={name:"hd",url:"baidu"}
+      // let {url} = web
+      // console.log(url)
+
+      // let name  = "hd",url='baidu'
+      // // let opt = {name:name,url:url}
+      // // console.log(opt)
+      // let opt = {name,url}
+      // console.log(opt)
+
+      // let hd = {
+      //   name:'hd',
+      //   lesson:{
+      //     title:"javascript"
+      //   }
+      // }
+      // let {name,lesson:{title}} = hd
+      // console.log(name,title)
+
+      // function hd ([name,age]){
+      //    console.log(name,age)
+      // }
+      // hd(['xj',18])
+      // let [name,age] = ['xj',18]
+      // console.log(name)
+
+      // let hd = {};
+      // hd.name = "后盾人";
+      // hd["age"] = 18;
+      // delete hd.name;
+      // console.log(hd);
+
+      // console.log(hd.hasOwnProperty("age"))
+
+      // let hd = {name:"hdr"}
+      // let arr= ['hdr.com']
+      // console.log('concat' in arr)
+
+      // let a  ={
+      //   name:"hdr"
+      // }
+      // let b ={
+      //   url:'hdudid'
+      // }
+      // Object.setPrototypeOf(a,b)
+      // // console.log(a)
+      // console.log(a.hasOwnProperty('url'))
+      // console.log('url' in a)
+
+      // function oss (options){
+      //   if(!options.hasOwnProperty('host')){
+      //     throw new Error ("必须由主机地址")
+      //   }
+      // }
+      // oss({name:'333'})
+
+      // let hd = {}
+      // let name = 'title'
+      // hd[name]='hdr'
+      // console.log(hd.title)
+
+      // let hd ={
+      //   name:'hdr',
+      //   year:"2013"
+      // }
+      // console.log(Object.keys(hd))
+      // console.log(Object.values(hd))
+      // for(keys in hd){
+      //   console.log(keys)
+      // }
+      // let arr = [1,1,3,32,1,3,2]
+      // for(value of arr){
+      //   console.log(value)
+      // }
+      // for(const value of Object.keys(hd)){
+      //   console.log(value)
+      // }
+      // let lesson = [{name:"js",click:90},{name:"php",click:10}]
+      // let ul = document.createElement('ul')
+      // for(const value of lesson){
+      //   let li = document.createElement('li')
+      //   li.innerHTML = `课程:${value.name},点击数${value.click}`
+      //   ul.appendChild(li)
+      // }
+      // document.body.appendChild(ul)
+
+      // let hd = {name:'hdr'}
+      // // let cms = hd
+      // // cms.name="baidu.com"
+      // console.log(hd)
+
+      // let cms = {
+      //   name:hd.name
+      // }
+      // cms.name="sn.com"
+      // console.log(cms)
+
+      // let hd = {name:"hdr",url:"baidu.com"}
+      // let obj={}
+      // for(const key in hd){
+      //   obj[key]=hd[key]
+      // }
+      // obj.name="yahu"
+      // console.log(obj)
+
+      // let obj = Object.assign({},hd);
+      // console.log(obj)
+      // obj.name = "tom"
+      // console.log(obj)
+
+      // let obj = {...hd}
+      // console.log(obj)
+      // obj.name = "chrome"
+      // console.log(obj)
+      // console.log(hd)
+
+      // let obj = {
+      //   name : 'hdr',
+      //   user:{
+      //     name:'hdms'
+      //   }
+      // }
+      // let hd = {
+      //   name:obj.name,
+      //   user:obj.user
+      // }
+      // hd.user.name="xj"
+      // console.log(JSON.stringify(obj,null,2))
+      // console.log(JSON.stringify(hd,null,2))
+
+      // let obj = {
+      //   name: "hdr",
+      //   user: {
+      //     name: "hdms"
+      //   }
+      // };
+
+      // function copy(object) {
+      //   let res = {};
+      //   for (const key in object) {
+      //     res[key] = typeof object[key] =='object'?copy(object[key]):object[key]
+      //     console.log(key)
+      //     console.log(res[key])
+      //   }
+      //   return res;
+      // }
+      // let hd = copy(obj);
+      // hd.user.name = 'xj'
+      // console.log(JSON.stringify(hd, null, 2));
+      // console.log(JSON.stringify(obj,null,2))
+
+      // let data = {
+      //   name:'hdr',
+      //   user:{
+      //     name:"hdcms"
+      //   },
+      //   arr:[1,2,3,1,3,2,4]
+      // }
+
+      // function copy(object){
+      //     let res = object instanceof Array?[]:{}
+      //     for (const [k,v] of Object.entries(object)) {
+
+      //       res[k] = typeof v ==='object'?copy(v):v
+
+      //     }
+      //     return res
+      // }
+      // let hd = copy(data)
+      // hd.arr.push('abc')
+      // console.log(JSON.stringify(hd,null,2))
+      // console.log(JSON.stringify(data,null,2))
+
+      // let xj = {
+      //   name: "xj",
+      //   show: function() {
+      //     console.log(this.name);
+      //   }
+      // };
+
+      // let hd = {
+      //   name: "hdr",
+      //   show: function() {
+      //     console.log(this.name);
+      //   }
+      // };
+
+      // function user(name) {
+      //   return {
+      //     name: name,
+      //     show: function() {
+      //       console.log(this.name+"0123");
+      //     }
+      //   };
+      // }
+      // let xj = user('湘军')
+      // console.log(xj)
+      // xj.show()
+
+      // function User(name){
+      //     this.name=name
+      //     this.show = function(){
+      //       console.log(this.name)
+      //       console.log(this)
+      //     }
+      // }
+      // let xj = new User('xj')
+      // console.log(xj.show())
+
+      // let func = xj.show;
+      //  func("xk")
+
+      // let o = {}
+
+      // let o  = new Object();
+      // o.name="hdr"
+      // console.log(o)
+
+      // function User(name,age){
+      //   let data = {name,age}
+      //   let info = function(){
+      //     return data.age>50?"老年":"青年"
+      //   }
+      //   this.show=function(){
+      //     console.log(data.name+info())
+      //   }
+      // }
+      // let xj = new User('湘军')
+      // this.name='hdr'
+      // xj.info=function(){
+      //   return ''
+      // }
+      // xj.show()
+
+      // const user = {
+      //   name:'xj',
+      //   age:'18'
+      // }
+      // // // user.lesson = 'js'
+      // // // console.log(user)
+
+      // // // let arr = ['hdr','hdcms']
+      // // // console.log(arr)
+      // // // for (const [key,value] of Object.entries(arr)) {
+      // // //   console.log(key,value)
+      // // // }
+      // // Object.defineProperty(user,'name',{
+      // //   value:'hdr',
+      // //   writable:true,
+      // //   enumerable:true,
+      // //   configurable:true,
+      // // })
+      // // user.name="xiangjun"
+      // // console.log(user)
+      // // console.log(Object.keys(user))
+
+      // Object.preventExtensions(user) //不能为对象添加属性
+      // if(Object.isExtensible(user)){
+      //   user.site = "hdss"
+      // }
+      // console.log(user)
+
+      // const user = {
+      //   data:{name:"hdr", age:10},
+      //   set age(value){
+      //     if(typeof value !=='number' ||value<10||value>100){
+      //       throw new Error("年龄格式错误")
+      //     }
+      //     this.data.age =value
+      //   },
+      //   get age(){
+      //     return user.data.age+"岁"
+
+      //   }
+      // }
+      // user.age =87
+      // console.log(user.age)
+
+      // let lesson = {
+      //   lists:[
+      //     {name:'js',price:100},
+      //     {name:"css",price:200},
+      //     {name:"vue",price:98}
+      //   ],
+      //   get total(){
+      //     return this.lists.reduce((a,b)=>a+b.price,0)
+      //   }
+      // }
+      // console.log(lesson.total)
+
+      // const web = {
+      //   name:"hdr",
+      //   url:"houdunren.com",
+      //   set site(value){
+      //     // console.log(value)
+      //     [this.name,this.url] = value.split(',')
+      //   },
+      //   get site(){
+      //     return `${this.name}的网址${this.url}`
+
+      //   }
+      // }
+      // // web.name = "开源产品",
+      // web.site = "开源产品,www.hdcms.com"
+      // console.log(web.url)
+      // console.log(web.site)
+
+      // function User(name,age){
+      //   // this.name = name;
+      //   // this.age = age;
+      //   let data = {name,age}
+      //   Object.defineProperties(this,{
+      //        name :{
+      //          get(){
+      //            return data.name
+      //          },
+      //          set(value){
+      //            if(value.trim()===''||value.length>20){
+      //              throw new Error("用户名不合法")
+      //            }
+      //            data.name = value
+      //          }
+      //        },
+      //        age:{
+      //          get(){
+      //            return data.age
+      //          },
+      //          set(value){
+      //          data.age = value
+      //          }
+      //        }
+      //   })
+      // }
+      // let xj = new User('xj',19)
+      // xj.name  = 'hdr'
+      // console.log(xj.name)
+
+      // const hd = {name:'hdr'}
+      // const proxy = new Proxy(hd,{
+      //   get(obj,property){
+      //      return obj[property]
+      //   }
+      // })
+      // proxy.name = "xj"
+      // console.log(proxy.name)
+
+      // function factorial(num){
+      //   return num ===1?1:num*factorial(num-1);
+      // }
+      // let proxy = new Proxy(factorial,{
+      //   apply(func,obj,args){
+      //     console.time('run')
+      //     func.apply(this,args);
+      //     console.timeEnd("run")
+      //   }
+      // })
+      // proxy.apply({},[1000])
+
+      // let Request={
+      //   set token(content){
+      //    localStorage.setItem('token',content);
+      //   },
+      //   get token(){
+      //     let token = localStorage.getItem('token');
+      //     if(!token){
+      //       alert('请登录')
+      //     }
+      //     return token
+      //   }
+      // }
+      // Request.token="1321432543"
+      // console.log(Request.token)
+
+      //   class validate{
+      //     max(value,len){
+      //       return value.length<len
+
+      //     }
+      //     min(value,len){
+      //       return value.length>len
+      //     }
+      //     isNumber(value){
+      //       return /^\d+$/.test(value)
+      //     }
+      //   }
+      //   let vali = new validate()
+      //   console.log(vali.max('abc',5))
+
+      //   function ProxyFactroy(target){
+      //     return new Proxy(target,{
+      //       get(target,key){
+      //         return target[key]
+
+      //       },
+      //       set(target,key,value){
+      //        console.log(key)
+      //        return true
+      //       }
+      //     })
+      //   }
+      //  let proxy = ProxyFactroy(document.querySelectorAll("[validate]"))
+      //  proxy.forEach((item,i)=>{
+      //   //  console.log(item)
+      //    item.addEventListener("keyuo",function(){
+      //      proxy[i]=this
+      //    })
+      //  })
+
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>hdcms</div>
+    <div>jiapengli</div>
+
+    <script>
+      // let divs = document.querySelectorAll("div")
+      // console.log(Array.from(divs,function(item){
+      //     item.style.backgroundColor="red"
+      //     return item;
+      // }))
+      // let array = [1,3,5]
+      // console.log(array.length)
+      // let hd = ['hdcms']
+      // hd[3]="jiapeng"
+      // console.log(hd)
+      // let arr = [1,3,4]
+      // arr.map(function(item){
+      //     console.log(item)
+      //     return item
+      // })
+      // Array.from(divs).map(item=>console.log(item))
+      // Array.prototype.map.call(divs,function (item) {
+      //     console.log(item)
+      // })
+      // console.log([...divs])
+
+      // let cms = new Array(1,2,3,1,1)
+      // console.table(cms)
+
+      // let arr = Array.of(6)
+      // console.log(arr)
+
+      // let str = 'hdcms'
+      // console.log(str.split(""))
+      // console.log(Array.from(str))
+      // let obj ={name:"hdcms",age:"29"}
+
+      // let arr = ['hdcms','houdunren']
+      // let hd = ['js','css']
+      // // for (const value of hd) {
+      // //     arr.push(value)
+      // // }
+      // arr=[...arr,...hd]
+      // console.log(arr)
+      // function show(...arg) {
+      //     console.log(arg)
+      //    return arg.reduce((a,b)=>a+=b)
+      // }
+      // console.log(show(1,2,3,5))
+
+      //   let arr = ["hdcms", "hdr"];
+      //    arr[arr.length]='cms'
+      //    arr[arr.length]='shop'
+      // let hd = ["shop", "cms"];
+      //   arr = [...arr, ...hd];
+      //   arr.push(...hd)
+
+      //   console.log(arr);
+
+      //   function rangeArray(begin,end) {
+      //       const arr = []
+      //       for(let i =begin;i<=end;i++){
+      //           arr.push(i)
+      //       }
+      //       return arr
+      //   }
+      //   console.table(rangeArray(11,15))
+
+      //   let arr = ["hdcms", "houdun", 1, 3, 4, 8, 1];
+      //   //   arr.pop()
+      //   //   arr.unshift("houdunren");
+      //   //   arr.shift()
+      //   console.log(arr.slice(1, 2));
+      //   console.table(arr);
+
+      //   let arr = [1, 3, 4, 5, 1, 2, 3, 3, 4, 8, 90, 3, 0, 5, 4, 0].filter(
+      //     function(elem, index, Array) {
+      //       //   console.log(Array)
+      //       return index === Array.indexOf(elem);
+      //     }
+      //   );
+      //   console.log(arr);
+
+      //   var i = 10
+      //       (i++)+=i
+
+      //   console.log(i)
+
+      // let array = [1,2,3,4]
+      // function move(arry,form,to){
+      //   if(form<0||to>array.length){
+      //     console.error('参数错误')
+      //     return
+      //   }
+      //   const newArray = [...array]
+      //   let item = newArray.splice(form,1)
+      //   console.log(item)
+      //   newArray.splice(to,0,...item)
+      //   return newArray
+      // }
+      // console.log(move(array,1,3))
+
+      // let hd = [1,2,3,1,4,1]
+      // hd = []
+      // hd.length=0
+      // hd.splice(0,hd.length)
+      // while(hd.pop()){
+
+      // }
+      // console.log(hd)
+
+      // let str = 'hdcms,hdr.com'
+      // console.log(str.split(",").join('_'))
+      // let arr = ['hdcms','ddd']
+      // let hd = [1,2,3,1]
+      // arr = arr.concat(hd)
+      // console.log(arr)
+      // let hd = [1,2,3,1]
+      // console.log(hd.copyWithin(2,0,2))
+
+      // let arr = [1, 2, 3, 4, 1, 6, 7];
+      // console.log(arr.indexOf(7))
+      // console.log(arr.includes(1))
+
+      // function includes(array,find){
+
+      //     for (const value of array) {
+      //         if(value ===find){
+      //           return true
+      //         }
+      //        return false
+      //     }
+      // }
+      // console.log(includes(arr,1))
+      //  let res =  arr.find((item)=>{
+      //      return item==6
+      //   })
+      //   console.log(res)
+
+      // let lessons = [{ name: "js" }, { name: "css" }, { name: "mysql" }];
+      // console.log(lessons.includes({name:"css"}))
+      // let res = lessons.find(item => {
+      //   return (item.name == "css");
+      // });
+
+      // let res = lessons.findIndex(item => {
+      //   return (item.name == "css");
+      // });
+      // console.log(res);
+
+      // function find(array,callback){
+      //   for(const value of array){
+      //     if(callback(value)){
+      //       return true
+      //     }
+      //   }
+      //   return undefined
+      // }
+      // console.log(find(lessons,function(item){
+      //   return item.name =="css"
+      // }))
+
+      // Array.prototype.findValue = function(callback){
+      //   for(const value of this){
+      //     if(callback(value)){
+      //       return true
+      //     }
+      //   }
+      //   return undefined
+      // }
+      // console.log(lessons.findValue(function(item){
+      //   return item.name =="js"
+      // }))
+
+      // let arr = [1, 5, 1, 3, 2, 7, 8, 11, 22];
+      // let res = arr.sort(function(a, b) {
+      //   return a - b;
+      // });
+      // console.table(res);
+      // const cart = [
+      //   {name:'iphone',price:"8000"},
+      //   {name:'ipad',price:"3200"},
+      //   {name:"imac",price:"18000"}
+      // ]
+      // res = cart.sort((a,b)=>b.price-a.price)
+      // console.log(res)
+
+      // function sort(array,callback) {
+      //   for (const n in array) {
+      //     for (const m in array) {
+      //       if (callback(array[n],array[m])<0) {
+      //         const temp = array[n];
+      //         array[n] = array[m];
+      //         array[m] = temp;
+      //       }
+      //     }
+      //   }
+      //   return array;
+      // }
+      // console.log(sort(arr,function(a,b){
+      //   return a-b
+      // }));
+
+      // let lessons = [
+      //   { title: "媒体查询响应式布局", category: "css" },
+      //   { title: "FLEX 弹性盒子模型", category: "css" },
+      //   { title: "MYSQL多表查询随意操作", category: "mysql" }
+      // ];
+      // for(let i = 0 ; i<lessons.length;i++){
+      //   lessons[i].title='hdr'+lessons[i].title
+      // }
+      // for (const value of lessons) {
+      //   value.title = 'hdr'+value.title
+      // }
+      //  for (const key in lessons) {
+      //    lessons[key].title = "hdr"+lessons[key].title
+      //  }
+      // lessons.forEach((element,index,lessons) => {
+      //     element.title = element.title.substr(0,2)
+      // });
+
+      // console.table(lessons);
+
+      // let arr = [1,2,3]
+      // let keys = arr.keys();
+      // let values = arr.values()
+      // let {value,done} = keys.next()
+      // console.log(value,done)
+      // while(({value,done} = values.next())&& done ===false){
+      //   console.log(value)
+      // }
+      // let entries = arr.entries();
+      // let {done,value:[a,b]} = entries.next()
+      // console.log(a,b)
+      // for (const [key,value] of arr.entries()){
+      //   console.log(key,value)
+      // }
+
+      // let arr = ['hdcms','houdunren']
+      // arr.every(function(item,index,array){
+      //   console.log(item)
+      //   return true
+      // })
+      //   const user = [{name:'lisi',js:'89'},{name:'zs',js:'99'},{name:"maliu",js:"55"}]
+      //  let res=user.every(function(value,index,array){
+      //     return value.js>=60
+      //   })
+      //   console.log(res?'全员及格':"有同学没及格")
+
+      //   let arr = ['hdms','houdunr']
+      //  let res= arr.some(function(value,index,array){
+      //     console.log(value)
+      //     return true
+      //   })
+      //   console.log(res)
+
+      //   let arr = ['hdcms','houdunren']
+      //  let res = arr.filter(function(value,index,arr){
+      //       return true
+      //   })
+      //   console.log(res)
+
+      // let hd = [1,2,3,4]
+      // function filter(array,callback){
+      //     let  newArray=[]
+      //     for(const value of array){
+      //       if(callback(value)===true){
+      //         newArray.push(value)
+      //       }
+      //     }
+      //     return newArray
+      // }
+      // console.log(filter(hd,function(value){
+      //   return value>2
+      // }))
+
+      // let lessons = [
+      //   {
+      //     title: "媒体查询",
+      //     category: "css"
+      //   },
+
+      //   {
+      //     title: "FELX",
+      //     category: "css"
+      //   },
+      //   {
+      //     title: "MYSQL",
+      //     category: "mysql"
+      //   }
+      // ];
+
+      // let arr = ["hdcms", "houdunren"];
+      // let hd = arr.map(function(value, index, array) {
+      //   value = `houdunren-${value}`;
+      //   return value;
+      // });
+      // console.log(hd);
+
+      //  let hd = lessons.map(function(value){
+      //    return Object.assign({click:100},value)
+      //     // value.click = 100;
+      //   })
+      //   console.table(hd)
+      //   console.table(lessons)
+
+      // let arr = [1, 2, 2, 35, 6, 1, 2];
+
+      // arr.reduce(function(pre,value,index,array){
+
+      // })
+      // arr.reduce(function(pre, value, index, array) {
+      //        console.table(pre,value)
+      //        return 99
+      // },0);
+
+      // function arrayCount(array,item){
+      //   return array.reduce(function(total,cur){
+      //      total += item ==cur?1:0
+      //      return total
+      //    })
+      // }
+      // console.log(arrayCount(arr,1))
+
+      // function arrayMax(array){
+      //  array.reduce(function(pre,cur){
+      //    return pre>cur?pre:cur
+      //  })
+      // }
+      // console.log(arrayMax(arr))
+
+      // let cart = [
+      //   { name: "iphone", price: 12000 },
+      //   { name: "imac", price: 25000 },
+      //   { name: "ipad", price: 3600 }
+      // ];
+      // function MAXprice(goods) {
+      //   return cart.reduce(function(pre, cur) {
+      //     console.log(pre,cur)
+      //     return pre.price > cur.price ? pre : cur;
+      //   });
+      // }
+      // console.log(MAXprice(cart))
+
+      // function sum(goods){
+      //   return goods.reduce(function(pre,cur){
+      //     console.log(pre,cur)
+      //     return pre +=cur["price"]
+      //   },0)
+      // }
+      // console.log(sum(cart))
+
+      // console.log(cart.reduce((pre,currrnt)=>{
+      //   console.log(pre,currrnt)
+      // }))
+
+      // function getNameByPrice(goods, price) {
+      //   return goods.reduce(function(pre, cur) {
+      //     console.log(pre,cur)
+      //     if (cur.price > price) {
+      //       pre.push(cur);
+      //     }
+      //     return pre;
+      //   }, []);
+      // }
+      // console.table(getNameByPrice(cart, 10000));
+
+      // let arr = [1, 2, 2, 3, 4, 5, 2, 6, 6];
+      // let newArr = arr.reduce(function(pre, cur) {
+      //   console.log(pre,cur)
+      //   if (pre.includes(cur) === false) {
+      //     pre.push(cur);
+      //   }
+      //   return pre;
+      // }, []);
+      // console.log(newArr);
+
+      //  let cart = [
+      //   { name: "iphone", price: 12000 },
+      //   { name: "imac", price: 25000 },
+      //   { name: "ipad", price: 3600 },
+      //   { name: "iphone", price: 12000 },
+      // ];
+
+      // function filterGoods(goods){
+      //   return goods.reduce(function(pre,cur){
+      //     let find = pre.find(function(v){
+      //       return v.name===cur.name
+      //     });
+      //     if(!find){
+      //       pre.push(cur)
+      //     }
+      //     return pre
+      //   },[])
+      // }
+      // console.table(filterGoods(cart))
+
+      
+
+    </script>
+  </body>
+</html>

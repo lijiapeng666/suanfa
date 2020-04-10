@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <ul id="Ul">
+      <li class="Li">第一个</li>
+      <li class="Li">第二个</li>
+      <li class="Li">第三个</li>
+      <li class="Li">第四个</li>
+      <li class="Li">第五个</li>
+    </ul>
+
+    <script>
+      //   let li = document.getElementsByClassName("Li");
+      //   for (let i = 0; i < li.length; i++) {
+      //     li[i].addEventListener("click", () => {
+      //       alert(`第${i + 1}个`);
+      //     });
+      //   }
+      let Ul = document.getElementById("Ul");
+      Ul.addEventListener("click", e => {
+        var Li = e.target.nodeName.toLowerCase();
+        if ((Li = "li")) {
+          var target = e.target;
+          alert(e.srcElement.innerText);
+          //   console.log(`${e.srcElement.innerText}`);
+        }
+      });
+      document.body.style.background = "red";
+      document.body.style.background = "blue";
+      let i = 1;
+      while (i < 1000) {
+        i += 1;
+      }
+      console.log(i);
+    </script>
+  </body>
+</html>

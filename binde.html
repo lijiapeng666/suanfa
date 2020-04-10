@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>hdcms</button>
+
+    <button>lijiapeng</button>
+
+    <script>
+      //    let lisi  = {
+      //        name : "lisi"
+      //    }
+      //    let wangwu = {
+      //        name :"wangwu"
+      //    }
+      //    function User(){
+      //        console.log(this.name)
+      //    }
+      //    User.call(lisi)
+
+      // function show(){
+      //     alert(this.innerHTML)
+      // }
+
+      // let buttons = document.querySelectorAll('button')
+      // for(let i = 0 ;i<buttons.length;i++){
+      //     buttons[i].addEventListener('click',()=>{
+      //         show.call(event.target)
+      //     })
+      // }
+
+      //   let arry = [11, 1, 2, 3, 4, 1];
+      //   console.log(Math.max.apply(Math, arry));
+
+      function Arcticle(){
+          this.url = 'arcticle/lists'
+          this.get = function(parmas){
+             let str=Object.keys(parmas).map(k=>`${k}=${parmas[k]}`).join('&')
+             console.log(`${this.url}/${str}`)
+
+          }
+      } 
+      let a  = new Arcticle();
+      console.log(a.get({id:1,cat:"js"}))
+    </script>
+  </body>
+</html>

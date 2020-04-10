@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //函数带有默认参数
+
+      //   function avg(total, year = 1) {
+      //     //  year = year || 1;
+      //     return Math.round(total / year);
+      //   }
+      //   console.log(avg(2000));
+
+      //   function sortArry(array, type = "asc") {
+      //     return array.sort(function(a, b) {
+      //       return (type = "asc" ? a - b : b - a);
+      //     });
+      //   }
+      //   console.log(sortArry([3, 2, 1, 5], "desc"));
+
+      //   function sortArry(array,type="asc"){
+      //       return array.sort((a,b)=>{
+      //           type=="asc"?a-b:b-a
+      //       })
+      //   }
+      //   console.log(sortArry([3,1,4,2],"desc"))
+
+      //   function sum(total, discount = 0, dis = 0) {
+      //     return total * (1 - discount) * (1 - dis);
+      //   }
+      //   console.log(sum(1000));
+
+      //   function hd(a){
+      //       return a<=3
+      //   }
+      //   let arr = [1,2,3,4,3,5,7,6,].filter(hd)
+
+      //函数参数可以接收任何类型
+      // var i = 0
+      // function cms(){
+      //     console.log(++i)
+      // }
+      // setInterval(cms,1000)
+
+      // function sum (){
+      // //    console.log(arguments.length)
+      // let total = 0
+      // for(let i =0;i<arguments.length;i++){
+      //     total += arguments[i]
+
+      // }
+      // return total
+
+      // }
+      // console.log(sum(1,2,3,1,2,4,5))
+
+      // function sum (){
+      //     return [...arguments].reduce((a,b)=>a+b);
+      // }
+      // console.log(sum(1,2,3,1,5,6,2))
+
+      //箭头函数
+      //   let hd = () => {
+      //     return 1 + 2;
+      //   };
+      //   console.log(hd());
+
+      //   let hd = [1, 2, 3, 1, 2, 35, 21].filter(function(values, index) {
+      //     return values <= 3;
+      //   });
+      //   console.log(hd);
+      // let hd = [1,2,31,32,1,2,3,13,2].filter(values => values<=3)
+      // console.log(hd)
+
+      //  let sum = [1,2,31,32,1,2,3,13,2].reduce((a,b)=>a+b)
+      //  console.log(sum)
+
+      //   递归
+
+      //   function factorial(num){
+      //       if(num==1){
+      //           return 1;
+      //       }
+      //       return num * factorial(num-1)
+      //   }
+      //   console.log(factorial(5))
+      // function factoral (num){
+      //     return num ===1?1:num*factoral(num-1)
+      // }
+      //   console.log(factorial(5))
+
+      //   求和
+      //   let sum = [1, 3, 1, 2, 3, 1, 3].reduce((a, b) => a + b);
+      //   console.log(sum);
+
+      // function sum (...args){
+      //     if(args.length==0){
+      //         return 0
+      //     }
+      //     args.pop()+sum(...args)
+      // }
+      // console.log(sum(1,2,3,1,3,1,2,5))
+
+      //   function star(sum) {
+      //       if(sum ==0){
+      //           return ''
+      //       }
+      //     document.write("*".repeat(sum)+"<br/>");
+      //     star(--sum)
+      //   }
+      //   star(5);
+
+      //   lessins = [
+      //     {
+      //       title: "GRID",
+      //       click: "86"
+      //     },
+      //     {
+      //       title: "cad",
+      //       click: "90"
+      //     },
+      //     {
+      //       title: "abc",
+      //       click: "100"
+      //     }
+      //   ];
+
+      //   function change(lessins,num=100,i=0) {
+      //       if(i==lessins.length){
+      //           return lessins
+      //       }
+      //       lessins[i].click+=num
+      //       return change(lessins,num,++i)
+
+      //   }
+      //   console.table(change(lessins,40))
+
+      //收放
+      //   let hd = [1,2,3]
+      //   let [a,b,c] = [...hd]
+      //   function sum(discount = 0, ...price) {
+      //       let total = price.reduce((a,b)=>a+b)
+      //       return Math.round(total*(1-discount))
+      //   }
+      //   console.log(sum(0, 133, 4, 222, 877));
+
+      //this
+      //   let obj = {
+      //       name :"didi",
+      //       show(){
+      //           return obj.name
+      //       }
+      //   }
+      //   console.log(obj.show())
+
+      //   let hd = {
+      //     name: "didi",
+      //     show() {
+      //       return this.name;
+      //     }
+      //   };
+      //   console.log(obj.show());
+
+      //   let Lesson = {
+      //       site:'didi',
+      //       lists:["js","css","mysql"],
+
+      //       show:function(){
+      //           const self = this
+      //          return this.lists.map(function(item){
+      //              return `${self.site}-${item}`
+      //          })
+      //       }
+      //   }
+      //   console.log(Lesson.show())
+
+      //applay,call,bind
+
+      //   function User() {
+      //     this.name = name;
+      //     // return { a: "dddiiidadadada" };
+      //   }
+      //   let lisi = new User("didi");
+
+      //   let hdcms  =  {url:"hdcms.com"}
+      //   User.call(hdcms,"开源系统")
+      //   console.log(hdcms)
+    </script>
+  </body>
+</html>

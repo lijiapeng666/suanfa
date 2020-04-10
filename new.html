@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // function create(v) {
+      //     // var args = Array.prototype.slice.call(arguments);
+      //     // console.log(args)
+
+      //     let obj = new Object();
+      //     console.log(obj);
+      //     obj.__proto__ = v.prototype;
+      //     console.log(obj);
+      //     v.apply(obj);
+      //     return obj;
+      // }
+      // function create() {
+      //     console.log(arguments);
+      //     //创建一个空对象
+      //     let obj = new Object();
+      //     //获取构造函数
+      //     let Constructor = [].shift.call(arguments);
+      //     console.log([].shift.call(arguments))
+      //     console.log(Constructor);
+      //     //链接到原型
+      //     console.log(Constructor.prototype);
+      //     obj.__proto__ = Constructor.prototype;
+      //     // console.log(obj)
+      //     //绑定this值
+      //     let result = Constructor.apply(obj, arguments); //使用apply，将构造函数中的this指向新对象，这样新对象就可以访问构造函数中的属性和方法
+      //     console.log(result)
+      //     console.log(obj)
+      //         //返回新对象
+      //     return typeof result === "object" ? result : obj; //如果返回值是一个对象就返回该对象，否则返回构造函数的一个实例对象
+      // }
+
+      // function People() {
+      //     this.name = "name";
+      //     this.age = "age";
+      // }
+      //通过new创建构造实例
+      // let people1 = new People('Jack', 20);
+      // console.log(people1.name) //Jack
+      // console.log(people1.age) //20
+
+      //通过create方法创造实例
+      // let people2 = create(People); //调用自定义create实现new
+      // console.log(people2);
+      // console.log(people2.name); //Rose
+      // console.log(people2.age); //18
+
+      // ---------------------------------------------------------------
+
+      // function _new(fun) {
+      //     // console.log(fun)
+      //     // console.log(arguments)
+      //     return function() {
+      //         let obj = {
+      //                 __proto__: fun.prototype
+      //             }
+      //             // console.log(obj)
+      //         fun.apply(obj, arguments)
+      //         return obj
+      //     }
+      // }
+
+      // function person() {
+      //     this.name = "name"
+      //     this.age = "age"
+      // }
+      // let obj = _new(person)()
+      // console.log(obj)
+      // {name: 'LL', age: 100}
+
+      // -------------------------------------------------------------------
+      //   function People() {
+      //     this.name = "name";
+      //     this.age = "age";
+      //   }
+
+      //   function create(v) {
+      //     // console.log(v)
+      //     let obj = new Object();
+
+      //     obj.__proto__ = People.prototype;
+      //     console.log(obj);
+      //     console.log(arguments);
+      //     console.log(obj);
+      //     v.apply(obj, arguments);
+      //     console.log(obj);
+      //     return obj;
+      //   }
+      //   let pople = create(People);
+      //   console.log(pople);
+      //
+    </script>
+
+    <!-- <script>
+        // function Person() {
+        //     this.age = "age"
+        //     this.name = "name"
+        // }
+        // let app = new Object
+        // Person.call(app)
+        // console.log("app", app)
+        var arr = [5, 7, 9, 1]
+
+        function getMax2(arr) {
+            let arr1 = [1, 2, 3, 20]
+            console.log(Math.max.apply(null, arr))
+            console.log(Math.max.apply(null, arr1))
+                // return Math.max.apply(null, arr);
+        }
+        getMax2(arr)
+    </script> -->
+
+    <script>
+      // function peple() {
+      //     this.name = "li"
+      //     this.foot = "double"
+      // }
+
+      // function CreatePeple(v) {
+      //     let obj = new Object()
+      //     obj.__proto__ = CreatePeple.prototype
+      //     v.apply(obj)
+      //     return obj
+
+      // }
+
+      // li = CreatePeple(peple)
+      // console.log(li)
+
+      // function peple(name, foot) {
+      //     this.name = name
+      //     this.foot = foot
+      // }
+
+      // function CreatePeple(fuc, param1, param2) {
+      //     console.log(arguments)
+
+      // }
+      // let li = CreatePeple(peple, name, foot)
+      // console.log(li)
+      // function People(name, age) {
+      //     this.name = name;
+      //     this.age = age;
+      // }
+
+      // function create() {
+      //     // console.log(arguments);
+      //     //创建一个空对象
+      //     let obj = new Object();
+      //     //获取构造函数
+      //     let Constructor = [].shift.call(arguments);
+      //     // console.log([].shift.call(arguments))
+      //     // console.log(Constructor);
+      //     //链接到原型
+      //     // console.log(Constructor.prototype);
+      //     obj.__proto__ = Constructor.prototype;
+      //     // console.log(obj)
+      //     //绑定this值
+      //     let result = Constructor.apply(obj, arguments); //使用apply，将构造函数中的this指向新对象，这样新对象就可以访问构造函数中的属性和方法
+      //     // console.log(result)
+      //     // console.log(obj)
+      //     //返回新对象
+      //     return typeof result === "object" ? result : obj; //如果返回值是一个对象就返回该对象，否则返回构造函数的一个实例对象
+      // }
+
+      // let people2 = create(People); //调用自定义create实现new
+      // console.log(people2);
+      // console.log(people2.name); //Rose
+      // console.log(people2.age); //18
+
+      // function myNew() {
+      //   let obj = new Object();
+      //   console.log(arguments);
+      //   let Constructor = [].shift.call(arguments);
+      //   console.log(Constructor);
+      //   // console.log([].push.call(arguments))
+      //   // console.log(Constructor.prototype)
+      //   obj.__proto__ = Constructor.prototype;
+      //   console.log(obj)
+
+      //   let result = Constructor.apply(obj, arguments);
+
+      //   return typeof result == "object" ? result : obj;
+      // }
+      // function babi() {
+      //   this.eat = "eat";
+      // }
+      // let c = myNew(babi);
+      // console.log(c);
+    </script>
+
+    <!-- 
+   <script>
+    function newMY(){
+      let obj = new Object
+      let Constructor = [].shift.call(arguments)
+      obj.__proto__ = Constructor.prototype
+      console.log(obj)
+      let result = Constructor.apply(obj,arguments)
+      return typeof result == "object"?result:obj
+    }
+    function a(){
+      this.b="C"
+    }
+    let MY = newMY(a)
+    console.log(MY)
+   
+   
+   </script> -->
+
+    <!-- <script>
+      function myNew() {
+        let obj = {};
+        let Constructor = [].shift.call(arguments);
+        obj.__proto__ = Constructor.prototype;
+        console.log(obj) 
+        let result = Constructor.apply(obj, arguments);
+        return typeof result == "object" ? result : obj;
+      }
+      function co() {
+        this.a = "11";
+      }
+      let dog = myNew(co);
+      console.log(dog);
+    </script> -->
+
+
+
+
+    
+   
+
+
+
+
+
+  </body>
+</html>

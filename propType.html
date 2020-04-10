@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  绑定this指向方式实现继承
+
+        // function dad() {
+        //     this.eat = "eat";
+        //     this.run = "run";
+        // }
+
+        // function son() {
+        //     dad.call(this);
+        // }
+        // li = new son();
+        // console.log(li.eat);
+
+        //原型链方式继承
+
+        function Dad() {
+            this.eat = "eat"
+            this.run = "run"
+            this.eye = ["eye1", "eye2"]
+        }
+
+        function Son() {
+            this.crol = "爬"
+
+        }
+        Son.prototype = new Dad
+        var son = new Son
+        son.eye.push("eye3")
+        son.run = "RUN"
+        var son2 = new Son
+        console.log(new Son)
+        console.log(Son.prototype)
+        console.log(son.eye)
+        console.log(son2.eye)
+
+        //组合方式继承
+
+        // function dad() {
+        //     this.eat = "eat"
+        //     this.run = "run"
+        //         // console.log("调用")
+        // }
+
+        // function son() {
+        //     dad.call(this)
+        // }
+        // son.prototype = new dad
+        // var son = new son
+        // console.log(son.eat)
+    </script>
+</body>
+
+</html>

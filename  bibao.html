@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button style="position: absolute;">didi</button>
+
+    <script>
+      // function hd (){
+      //     let n = 1;
+      //     return function sum(){
+      //         console.log(++n)
+      //     }
+      // }
+      // let a  = hd()
+      // a()
+      // a()
+
+      // let arr = [1,2,3,4,512,21,23]
+      // let hd = arr.filter(function(v){
+      //     return v>=2&&v<=9
+      // })
+      // console.log(hd)
+
+      // function between(a,b){
+      //     return function(v){
+      //         return v>=a&&v<=b
+      //     }
+      // }
+      // console.log(arr.filter(3,9))
+
+      let btn = document.querySelectorAll("button");
+
+      btn.forEach(function(item) {
+        // let left = 1;
+        // let interval = false;
+        let bind = false;
+        item.addEventListener("click", function() {
+          if (!bind) {
+            bind = true;
+            let left = 1;
+            setInterval(function() {
+              item.style.left = left++ + "px";
+            }, 100);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

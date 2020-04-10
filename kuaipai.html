@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var quickSort = function(arr) {
+            if (arr.length < 2)
+                return arr
+            const basic = arr[0],
+                left = [],
+                right = []
+            for (let i = 1; i < arr.length; i++) {
+                const iv = arr[i]
+                iv >= basic && right.push(iv) // to avoid repeatly element.
+                iv < basic && left.push(iv)
+                console.log("iv", iv)
+                console.log("left", left)
+                console.log("right", right)
+            }
+            console.log("arr", arr)
+            return quickSort(left).concat(basic, quickSort(right))
+        }
+    </script>
+</body>
+
+</html>

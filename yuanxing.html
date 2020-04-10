@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //    let hd = {
+      //        show(){
+      //            console.log("didi")
+      //        }
+      //    }
+      //    hd.__proto__.render = function(){
+      //        console.log("dada")
+      //    }
+
+      //   function User() {}
+      //   User.prototype.show = function() {
+      //     console.log("didi");
+      //   };
+      //   let hd = new User();
+
+      //   hd.show();
+      //   console.log(user.prototype==hd.__proto__)
+      //   User.__proto__.view = function() {
+      //     console.log("view");
+      //   };
+      //   User.view();
+
+      //  let hd = new Object()
+      //  hd.name = "didi"
+      // //  console.log(hd)
+
+      // Object.prototype.show=function(){
+      //     console.log("show")
+      // }
+
+      // function User(){}
+      // console.dir(User)
+
+      //   let arr = []
+      //   console.log(arr.__proto__===Array.prototype)
+
+      //   let hd = { name: "hd" };
+      //   let jp = {
+      //     name: "jp",
+      //     show() {
+      //       console.log("parent"+this.name)
+      //     }
+      //   };
+      //   console.log(hd.__proto__ == Object.prototype);
+      //   Object.setPrototypeOf(hd, jp);
+      //   hd.show()
+      //   jp.show()
+
+      // function User(name){
+      //     this.name = name
+
+      // }
+      // User.prototype.show()=function(){
+      //     console.log(this.name)
+      // }
+      // let lisi = new User.prototype.constructor("lisi")
+      // lisi.show()
+      // console.dir(User)
+
+      //  function User(name){
+      //      this.name=name
+      //      this.show()=function(){
+      //          console.log(this.name)
+      //      }
+      //  }
+      //  let hd = new User("didi")
+      //  function createByObj(obj,...args){
+      //      const constructor = Object.getPrototypeOf(obj).constructor
+      //      return new constructor(...args)
+      //  }
+      //  let jp = createByObj(hd,"jiapeng")
+
+      // let arr = []
+      // console.log(arr.__protp__.__protp__===Object.prototype)
+      // let a = {name:"a"}
+      // let b = {name:"b",show(){
+      //     console.log(this.name)
+      // }}
+      // Object.setPrototypeOf(a,b)
+      // console.log(a)
+
+      //  let a = {};
+      //  let b = {};
+      //  console.log(Object.prototype.isPrototypeOf(a))
+      //  Object.setPrototypeOf(a,b)
+
+      // let a = {url:"didi"}
+      // let b = {name:"dada"}
+      // console.log("url" in a)
+      //   Object.setPrototypeOf(a,b)
+
+      // for(const key in a){
+      //   if(a.hasOwnProperty(key)){
+      //     console.log(a[key])
+      //   }
+      // }
+
+      // let hd  = {
+      //   data:[1,3,2,1,23]
+      // }
+      // Object.setPrototypeOf(hd,{
+      //   max(){
+      //     return this.data.sort((a,b)=>b-a)[0]
+
+      //   }
+      // })
+      // console.log(hd.max())
+
+      // let jp={
+      //   lessons:{js:50,php:70,node:90},
+      // }
+      // console.log(hd.max.call(null,Object.values(jp.lessons)))
+
+      // let hd = {
+      //   data:[1,2,3,1,5,5,66]
+      // }
+      // console.log(Math.max.apply(null,hd.data))
+
+      // function User(name) {
+      //   this.name = name;
+      //   // this.show() = function() {
+      //   //   console.log(this.name);
+      //   // };
+      // }
+      // User.prototype.show=function(){
+      //   console.log(this.name)
+      // }
+      // let lisi = new User("lisi");
+      // let jp = new User("jp");
+      // lisi.show()
+
+      // let user = {
+      //   show() {
+      //     return this.name;
+      //   }
+      // };
+      // //   // // 定义原型，不能获取
+      // //   // let hd = Object.create(user);
+      // //   // hd.name = "didi";
+      // //   // console.log(hd.show());
+
+      // let hd = { name: "didi" };
+      // //  hd.__proto__ = user
+
+      // Object.setPrototypeOf(hd, user);
+      // console.log(hd);
+      // Object.getPrototypeOf(hd)
+
+      //__proto__ getter setter
+      // let hd = {name:"didi"}
+      // hd.__proto__={
+      //   show(){
+      //      console.log(this.name)
+      //   }
+      // }
+      // hd.show()
+
+      // let hd ={
+      //   action:{},
+      //   get proto(){
+      //     return this.action
+      //   },
+      //   set proto(obj){
+      //     if(obj instanceof Object ){
+      //       this.action=obj
+      //     }
+      //   }
+      // }
+      // hd.proto = "abc"
+      // console.log(hd.proto)
+      // let hd = Object.create(null)
+
+      //原型的继承
+      // function User(){
+      //   this.name = function(){
+      //     console.log("name method")
+      //   }
+      // }
+      // User.prototype.name = function(){
+      //   console.log("Username")
+      // }
+      // let hd = new User()
+      // function Adimn (){
+
+      // }
+      // Adimn.prototype.__proto__ = User.prototype
+
+      // console.dir(Adimn)
+
+      // function User() {}
+      // User.prototype.show = function() {
+      //   console.log("username");
+      // };
+      // function Admin() {}
+      // Admin.prototype = Object.create(User.prototype);
+      // Admin.prototype.constructor = Admin;
+      // Admin.prototype.show = function() {
+      //   console.log("AdimShow");
+      // };
+      // let hd = new Admin();
+      // hd.show();
+
+      // 多态
+      // function User(){}
+      // User.prototype.show = function(){
+      //   console.log(this.description())
+      // }
+      // function Admin(){}
+      // Admin.prototype = Object.create(User.prototype)
+      // Admin.prototype.description = function(){
+      //   return "guanliyuan"
+      // }
+      // function Menber(){}
+      // Menber.prototype = Object.create(User.prototype)
+      // Menber.prototype.description = function(){
+      //   return "huiyuan"
+      // }
+      // for(const obj of [new Admin,new Menber]){
+      //   obj.show()
+      // }
+
+      // 如何使用父类的构造函数
+      // function User(name, age) {
+      //   (this.name = name), (this.age = age);
+      // }
+      // User.prototype.show = function() {
+      //   console.log(this.name, this.age);
+      // };
+      // function Admin(name, age) {
+      //   User.call(this, name, age);
+      // }
+      // Admin.prototype = Object.create(User.prototype);
+
+      // let jp = new Admin("lijiapeng", 18);
+      // jp.show()
+
+      // function extend ( sub,sup){
+      //  sub.prototype = Object.create(sup.prototype)
+      //  Object.defineProperty(Admin.prototype,'constructor',{
+      //    value:sub,
+      //    enumerable:false
+      //  })
+      // }
+
+    </script>
+  </body>
+</html>
